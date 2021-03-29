@@ -18,53 +18,42 @@
  
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="jumbotron">
-          <h2>Calcular:</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row"> 
-      <div class="col-12"> 
-        <div class="form-group">
-          <div class="label">Valor1</label>
-          <input type="number" class="form-control" id="valor1"></input>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row"> 
-      <div class="col-12"> 
-        <div class="form-group">
-          <div class="label">Valor2</label>
-          <input type="number" class="form-control" id="valor2"></input>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row"> 
-      <div class="col-12"> 
-        <div class="form-group">
-          <button class="btn-primary btn-block" id="somar">Somar</button>
-          <button class="btn-primary btn-block" id="subtrair">Subtrair</button>
-          <button class="btn-primary btn-block" id="multiplicar">Multiplicar</button>
-          <button class="btn-primary btn-block" id="dividir">Dividir</button>
-          <button class="btn-primary btn-block" id="potenciar">potenciar</button>  
-        </div>
-      </div>
-    </div>  
-   </div>
-    <div class="row"> 
-      <div class="col-12"> 
-        <div class="form-group">
-          <div class="label">Resultado</label>
-          <input type="text" class="form-control" id="resultado" readonly></input>
-          </div>
-        </div>
-      </div>
+
+  <div class="container-fluid">
+    <div class="row-display">
+    <div class="col-12" id="display">0</div>
     </div>
   </div>
+  <div class="row-linha">
+    <div class="offset-6 col-6"><button type="button" class="btn btn-primary btn-block ce">CE</button></div>
+  </div>
+
+  <div class="row linha">
+    <div class="col-3"><button class="btn btn-primary btn-block num">1</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">2</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">3</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block op">-</button></div>
+  </div>
+
+  <div class="row linha">
+    <div class="col-3"><button class="btn btn-primary btn-block num">4</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">5</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">6</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block op">*</button></div>
+  </div>
+
+  <div class="row linha">
+    <div class="col-3"><button class="btn btn-primary btn-block num">7</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">8</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">9</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block op">/</button></div>
+  </div>
+
+  <div class="row linha">
+    <div class="col-3"><button class="btn btn-primary btn-block num">0</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block num">.</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block calcular">=</button></div>
+    <div class="col-3"><button class="btn btn-primary btn-block op">+</button></div>
+  </div> 
 </body>
 </html>

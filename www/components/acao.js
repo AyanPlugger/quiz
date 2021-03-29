@@ -1,42 +1,46 @@
 // This is a JavaScript file
 
-$(document).on('click','#somar',function(){
-  var valor1 = parseFloat(document.getElementById('valor1').value);
-  var valor2 = parseFloat(document.getElementById('valor2').value);
+var display = "";
+var n1 = 0;
+var n2 = 0;
+var ope = "";
 
-  var resultado = parseFloat(valor1) + parseFloat(valor2);
+$(document).on('click', ".num", function(){
+  var n = $(this).html();
+  display += n;
+  $("#display").html(display);
 
-  $("#resultado").val(resultado);
 });
-$(document).on('click','#subtrair',function(){
-  var valor1 = parseFloat(document.getElementById('valor1').value);
-  var valor2 = parseFloat(document.getElementById('valor2').value);
-
-  var resultado = parseFloat(valor1) - parseFloat(valor2);
-
-  $("#resultado").val(resultado);
-});
-$(document).on('click','#multiplicar',function(){
-  var valor1 = parseFloat(document.getElementById('valor1').value);
-  var valor2 = parseFloat(document.getElementById('valor2').value);
-
-  var resultado = parseFloat(valor1) * parseFloat(valor2);
-
-  $("#resultado").val(resultado); 
-});
-$(document).on('click','#dividir',function(){
-  var valor1 = parseFloat(document.getElementById('valor1').value);
-  var valor2 = parseFloat(document.getElementById('valor2').value);
-
-  var resultado = parseFloat(valor1) / parseFloat(valor2);
-
-  $("#resultado").val(resultado);
-});
-$(document).on('click','#potenciar',function(){
-  var valor1 = parseFloat(document.getElementById('valor1').value);
-  var valor2 = parseFloat(document.getElementById('valor2').value);
-
-  var resultado = parseFloat(valor1) % parseFloat(valor2);
-
-  $("#resultado").val(resultado);
-});
+function CE(){
+  $("#display").html(0);
+  display = ""
+}
+$(document).on('click', ".ce", function(){
+  CE();
+});  
+$(document).on('click', ".op", function(){
+  n1 = display;
+  ope = $(this).html();
+  CE();
+});  
+$(document).on('click', ".calcular", function(){
+  n2 = display;
+  if(ope == "+"){
+    var result = parseFloat(n1)+parseFloat(n2);
+    $("#display").html(result);
+  }
+  if(ope == "*"){
+    var result = parseFloat(n1)*parseFloat(n2);
+    $("#display").html(result);
+  }
+  if(ope == "-"){
+    var result = parseFloat(n1)-parseFloat(n2);
+    $("#display").html(result);
+  }
+  if(ope == "/"){
+    var result = parseFloat(n1)/parseFloat(n2);
+    $("#display").html(result);
+  }
+  display = result;
+ 
+});  
